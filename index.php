@@ -44,33 +44,49 @@ $domande_frequenti = [
 <!DOCTYPE html>
 <html>
  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Domnde frequenti</title>
+    <title>Domande frequenti</title>
  </head>
  <body>
-    <?php
-     foreach ($domande_frequenti as $domanda) {
-     ?>
-    <div class="domanda">
+     <header>
+         <div id="header-top">
+             <div id="logo">
+                 <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png" alt="google">
+             </div>
+         </div>
+         <div id="header-bottom" class="clearfix">
+             <ul>
+                 <li> <a class="color" href="#">Introduzione</a> </li>
+                 <li> <a class="color" href="#">Norme sulla privacy</a> </li>
+                 <li> <a class="color" href="#">Termini di servizio</a> </li>
+                 <li> <a class="color" href="#">Tecnologie</a> </li>
+                 <li id="link"> <a id="active" href="#">Domande frequenti</a> </li>
+             </ul>
+         </div>
 
-        <span>
-            <?php
-            echo $domanda["domanda"];
-            ?>
-        </span>
+     </header>
+     <main>
 
-            <?php
-            echo "<br>";
-            ?>
-        <p>
-            <?php
-            echo $domanda["risposta"];
-            ?>
-        </p>
-    </div>
-    <?php
-     }
-     ?>
+     </main>
+        <?php
+         foreach ($domande_frequenti as $domanda) {
+         ?>
+        <div class="domanda">
 
+            <span>
+                <?php echo $domanda["domanda"]; ?>
+            </span>
+
+                <?php echo "<br>"; ?>
+            <p>
+                <?php echo $domanda["risposta"]; ?>
+            </p>
+
+        </div>
+
+        <?php }; ?>
+
+     </main>
  </body>
 </html>
